@@ -1,0 +1,19 @@
+# 手順
+## master_rotation_function.pyとapp_rotation_function.pyがあるディレクトリに移動
+## mkdir lib/
+## pip install -r requirements.txt -t lib/
+## Compress-Archive -Path .\master_rotation_function.py, .\lib\* -DestinationPath .\master-secret-rotation.zip -Force
+## Compress-Archive -Path .\app_rotation_function.py, .\lib\* -DestinationPath .\app-secret-rotation.zip -Force
+## aws s3 cp master-secret-rotation.zip s3://awshamasoron/cf-727646491820-ap-northeast-1/lambda/rotation/master-secret-rotation.zip
+## aws s3 cp app-secret-rotation.zip s3://awshamasoron/cf-727646491820-ap-northeast-1/lambda/rotation/app-secret-rotation.zip
+
+## deployment-package.zip
+# ├── lambda_function.py
+# ├── package1/
+# ├── package2/
+# └── package3/
+
+# reference: https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
+
+# 外部ライブラリ
+pymysql
