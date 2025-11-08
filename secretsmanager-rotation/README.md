@@ -9,7 +9,7 @@ AWS Secrets Manager用のカスタムローテーションLambda関数の実装�
 RDS/Aurora MySQLのパスワードを自動ローテーションするLambda関数を2種類提供します:
 
 - **Single-User Rotation（シングルユーザー）**: マスターユーザーのパスワードをRDS API経由で更新
-- **Multi-User Rotation（マルチユーザー）**: アプリケーションユーザーを交互に使用してゼロダウンタイムを実現
+- **Multi-User Rotation（マルチユーザー）**: アプリケーションユーザーを交互にSQL経由で更新してゼロダウンタイムを実現
 
 ## 🗂️ ディレクトリ構成
 
