@@ -60,7 +60,7 @@ secretsmanager-rotation/
 
 ## 🛠️ 技術スタック
 
-- **言語**: Python 3.11+
+- **言語**: Python 3.13
 - **AWS サービス**: 
   - AWS Secrets Manager
   - AWS Lambda
